@@ -1,0 +1,380 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  color: white;
+  font-family: "Jura", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  width: 10vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* back */
+
+.back {
+  width: 50px;
+  height: 50px;
+  margin: 50px 0px 0px 50px;
+  transition: all 0.2s ease;
+  position: relative;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.back img {
+  width: 50px;
+  height: 50px;
+}
+
+.back:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+  transition: all 0.2s ease;
+}
+
+.container {
+  width: 100vw;
+  height: auto;
+  position: relative;
+  font-size: 40px;
+  background: url(https://cdn.pixabay.com/photo/2015/09/29/15/12/stars-964022_1280.png);
+  background-repeat: repeat-y;
+}
+
+@keyframes heading {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.container .heading {
+  width: 100vw;
+  height: 20vh;
+  font-size: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 5vw;
+  animation: heading 1.5s ease 0s 1 normal forwards;
+}
+
+.container .content {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  padding-left: 5vw;
+  font-size: 20px;
+  line-height: 50px;
+  animation: content 2s ease 0s 1 normal forwards;
+}
+
+.container .content .name {
+  width: 100vw;
+  height: 10vh;
+  font-size: 35px;
+  margin-top: 15vh;
+}
+
+.container .details {
+  width: 60vw;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 7vh;
+}
+
+@keyframes content {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container .content .photo {
+  width: 30vw;
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container .content .photo img {
+  width: 30vw;
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+}
+
+.container .content .video {
+  width: 90vw;
+  height: 70vh;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+}
+
+.container .content .video iframe {
+  width: 70vw;
+  height: auto;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+
+.container .content .resources {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.container .content .resources .resources-heading {
+  width: 100vw;
+  font-size: 30px;
+}
+
+.container .content .resources .resources-link {
+  width: 100vw;
+  height: auto;
+  font-size: 25px;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.container .content .resources .resources-link ul{
+  padding-left: 3vw;
+}
+
+.container .content .resources .resources-link a {
+  color: white;
+  padding-left: 3vw;
+}
+
+/* responsive */
+
+@media screen and (min-width: 750px) and (max-width: 900px) {
+  .container .content .video iframe {
+    width: 90vw;
+    height: 80vh;
+  }
+
+  .container .content .name {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 750px) {
+  .container .content .photo {
+    width: 100vw;
+    height: auto;
+    justify-content: start;
+    padding-left: 5vw;
+  }
+
+  .container .content .photo img {
+    width: 60vw;
+    height: auto;
+  }
+
+  .container .content .video iframe {
+    width: 90vw;
+    height: 80vh;
+  }
+
+  .container .details {
+    width: 80vw;
+  }
+
+  .container .content .name {
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 600px) {
+  .container .content .photo {
+    width: 100vw;
+    height: auto;
+    justify-content: start;
+    padding-left: 5vw;
+  }
+
+  .container .content .photo img {
+    width: 80vw;
+    height: auto;
+  }
+
+  .container .content .video {
+    height: 50vh;
+  }
+
+  .container .content .video iframe {
+    width: 90vw;
+    height: 50vh;
+  }
+
+  .container .details {
+    width: 80vw;
+  }
+
+  .container .content .name {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+}
+
+@media screen and (min-width: 350px) and (max-width: 450px) {
+  .container .content .photo {
+    width: 100vw;
+    height: auto;
+    justify-content: start;
+    padding-left: 5vw;
+  }
+
+  .container .content .photo img {
+    width: 80vw;
+    height: auto;
+  }
+
+  .container .content .video {
+    height: 50vh;
+  }
+
+  .container .heading {
+    font-size: 40px;
+  }
+
+  .container .content .video iframe {
+    width: 90vw;
+    height: 50vh;
+  }
+
+  .container .details {
+    width: 90vw;
+    padding: 10px;
+    margin: 0px;
+    line-height: 25px;
+  }
+
+  .container .content .name {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    height: 20vh;
+    font-size: 30px;
+  }
+
+  .back {
+    margin: 20px 0px 0px 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .back img {
+    width: 30px;
+    height: 30px;
+    right: 50%;
+    bottom: 50%;
+  }
+}
+
+@media screen and (min-width: 250px) and (max-width: 350px) {
+  .container .content .photo {
+    width: 100vw;
+    height: auto;
+    justify-content: start;
+    padding-left: 5vw;
+  }
+
+  .container .content .photo img {
+    width: 80vw;
+    height: auto;
+  }
+
+  .container .content .video {
+    height: 50vh;
+  }
+
+  .container .heading {
+    font-size: 40px;
+  }
+
+  .container .content .video iframe {
+    width: 90vw;
+    height: 50vh;
+  }
+
+  .container .details {
+    width: 90vw;
+    padding: 10px;
+    margin: 0px;
+    line-height: 25px;
+  }
+
+  .container .content .name {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    height: 20vh;
+    font-size: 30px;
+  }
+
+  .back {
+    margin: 20px 0px 0px 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .back img {
+    width: 30px;
+    height: 30px;
+    right: 50%;
+    bottom: 50%;
+  }
+}

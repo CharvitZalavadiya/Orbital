@@ -1,0 +1,283 @@
+@import url("https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: black;
+  color: white;
+  font-family: "Jura", sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  width: 10vw;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* back */
+
+.back {
+  width: 50px;
+  height: 50px;
+  margin: 50px 0px 0px 50px;
+  transition: all 0.2s ease;
+  position: relative;
+  background-color: white;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.back img {
+  width: 50px;
+  height: 50px;
+}
+
+.back:hover {
+  cursor: pointer;
+  transform: scale(0.9);
+  transition: all 0.2s ease;
+}
+
+.container {
+  width: 100vw;
+  height: auto;
+  position: relative;
+  font-size: 40px;
+  background: url(https://cdn.pixabay.com/photo/2015/09/29/15/12/stars-964022_1280.png);
+  background-repeat: repeat-y;
+}
+
+@keyframes heading {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.container .heading {
+  width: 100vw;
+  height: 20vh;
+  font-size: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding-left: 5vw;
+  animation: heading 1.5s ease 0s 1 normal forwards;
+}
+
+.container .about-us-details {
+  width: 90vw;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  animation: content 1.5s ease 0s 1 normal forwards;
+  padding-bottom: 10vh;
+}
+
+.container .about-us-details p {
+  font-size: 20px;
+  padding-left: 7vw;
+  line-height: 50px;
+}
+
+.container .content {
+  width: 100vw;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  /* flex-direction: column; */
+  padding-left: 5vw;
+  font-size: 20px;
+  line-height: 50px;
+  animation: content 2s ease 0s 1 normal forwards;
+}
+
+.container .content .name {
+  width: 100vw;
+  height: 10vh;
+  font-size: 35px;
+}
+
+.container .details {
+  width: 60vw;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 7vh;
+}
+
+.container .content .members{
+  width: 100vw;
+  height: 10vh;
+  font-size: 40px;
+}
+
+.container .content ul{
+  font-size: 40px;
+  padding-left: 5vw;
+}
+
+.container .content li{
+  font-size: 25px;
+  /* padding-left: 3vw; */
+}
+
+@keyframes content {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container .content .photo {
+  width: 30vw;
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container .content .photo img {
+  width: 30vw;
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+}
+
+@media screen and (min-width: 350px) and (max-width: 450px) {
+  .container .heading {
+    font-size: 40px;
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .content p {
+    width: 90vw;
+    padding: 10px;
+    margin: 0px;
+    line-height: 25px;
+  }
+
+  .container .heading b {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    height: 20vh;
+    font-size: 30px;
+  }
+
+  .container .content .point {
+    font-size: 23px;
+    width: 100vw;
+    margin: 0px;
+  }
+
+  .container .content .details {
+    line-height: 25px;
+    font-size: 17px;
+  }
+
+  .back {
+    margin: 20px 0px 0px 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .back img {
+    width: 30px;
+    height: 30px;
+    right: 50%;
+    bottom: 50%;
+  }
+
+  .container .about-us-details p {
+    line-height: 25px;
+  }
+}
+
+@media screen and (min-width: 250px) and (max-width: 350px) {
+  .container .heading {
+    font-size: 40px;
+    width: 80vw;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .content p {
+    width: 90vw;
+    padding: 10px;
+    margin: 0px;
+    line-height: 25px;
+  }
+
+  .container .heading b {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    height: 20vh;
+    font-size: 30px;
+  }
+
+  .container .content .point {
+    font-size: 23px;
+    width: 100vw;
+    margin: 0px;
+  }
+
+  .container .content .details {
+    line-height: 25px;
+    font-size: 17px;
+  }
+
+  .back {
+    margin: 20px 0px 0px 20px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .back img {
+    width: 30px;
+    height: 30px;
+    right: 50%;
+    bottom: 50%;
+  }
+
+  .container .about-us-details p {
+    line-height: 25px;
+  }
+}
